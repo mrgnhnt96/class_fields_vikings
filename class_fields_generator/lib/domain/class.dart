@@ -8,7 +8,22 @@ class Class {
   });
 
   factory Class.fromElement(ClassElement element) {
-    return Class(name: '', fields: []);
+    final name = element.name;
+
+    Iterable<Field> fields() sync* {
+      for (final fieldElement in element.fields) {
+        if (fieldElement.isSynthetic || fieldElement.isStatic) {
+          continue;
+        }
+
+        yield Field.fromElement(fieldElement);
+      }
+    }
+
+    return Class(
+      name: name,
+      fields: fields(),
+    );
   }
 
   final String name;
