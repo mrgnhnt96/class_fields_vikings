@@ -1,10 +1,22 @@
-name: class_fields_generator
+name: class_fields
 description: A Very Good Project created by Very Good CLI.
 version: 1.0.0+1
 publish_to: none
 
 environment:
   sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
+  # static analysis of Dart Code
+  analyzer: ^3.1.0
+  # the core of build_runner
+  build: ^2.2.1
+  class_fields_annotation:
+    path: ../class_fields_annotation
+  # dart annotations
+  meta: ^1.7.0
+  # utils for code gen
+  source_gen: ^1.2.1
 
 dev_dependencies:
   test: ^1.19.2
