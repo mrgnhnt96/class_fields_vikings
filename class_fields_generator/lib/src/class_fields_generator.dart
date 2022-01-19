@@ -1,7 +1,31 @@
-/// {@template class_fields_generator}
-/// A Very Good Project created by Very Good CLI.
+// ignore_for_file: implementation_imports
+
+import 'package:analyzer/dart/element/element.dart';
+import 'package:build/build.dart';
+import 'package:class_fields_annotation/src/class_fields_annotation.dart';
+import 'package:source_gen/source_gen.dart';
+
+/// {@template fields_generator}
+/// A [Generator] that generates all keys for fields
+/// from the [Fields] annotation
 /// {@endtemplate}
-class ClassFieldsGenerator {
-  /// {@macro class_fields_generator}
-  const ClassFieldsGenerator();
+class FieldsGenerator extends GeneratorForAnnotation<Fields> {
+  /// {@macro fields_generator}
+  const FieldsGenerator();
+
+  @override
+  String generateForAnnotatedElement(
+    Element element,
+    ConstantReader annotation,
+    BuildStep buildStep,
+  ) {
+    if (element is! ClassElement) {
+      throw InvalidGenerationSourceError(
+        'Generator cannot target `${element.runtimeType}`.',
+        element: element,
+      );
+    }
+
+    return '';
+  }
 }
