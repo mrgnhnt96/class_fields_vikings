@@ -19,5 +19,7 @@ dependencies:
   source_gen: ^1.2.1
 
 dev_dependencies:
+  # test generators and build runner
+  generator_test: ^0.1.0
   test: ^1.19.2
   very_good_analysis: ^2.4.0
