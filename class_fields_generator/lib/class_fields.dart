@@ -4,7 +4,7 @@ import 'package:source_gen/source_gen.dart';
 
 Builder classFieldsBuilder(BuilderOptions options) {
   return SharedPartBuilder(
-    [const FieldsGenerator()],
+    [const ClassFieldsGenerator()],
     'class_fields',
   );
 }

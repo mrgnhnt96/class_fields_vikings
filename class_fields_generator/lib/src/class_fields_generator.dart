@@ -11,9 +11,9 @@ import 'package:source_gen/source_gen.dart';
 /// A [Generator] that generates all keys for fields
 /// from the [Fields] annotation
 /// {@endtemplate}
-class FieldsGenerator extends GeneratorForAnnotation<Fields> {
+class ClassFieldsGenerator extends GeneratorForAnnotation<Fields> {
   /// {@macro fields_generator}
-  const FieldsGenerator();
+  const ClassFieldsGenerator();
 
   @override
   String generateForAnnotatedElement(
