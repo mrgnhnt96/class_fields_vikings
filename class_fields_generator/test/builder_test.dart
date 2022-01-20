@@ -7,7 +7,6 @@ void main() {
     final generator = SuccessGenerator.fromBuilder(
       'example',
       classFieldsBuilder,
-      compareWithFixture: false,
     );
 
     await generator.test();
