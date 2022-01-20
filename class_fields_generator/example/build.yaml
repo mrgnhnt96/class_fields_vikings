@@ -1,0 +1,7 @@
+targets:
+  $default:
+    builders:
+      class_fields:
+        enabled: true
+        options:
+          format_output: true
