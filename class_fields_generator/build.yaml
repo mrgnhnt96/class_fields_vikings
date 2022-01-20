@@ -1,6 +1,6 @@
 builders:
   class_fields:
-    import: “package:class_fields/class_fields.dart”
+    import: "package:class_fields/class_fields.dart"
     builder_factories:
       - classFieldsBuilder
     build_extensions:
@@ -9,4 +9,4 @@ builders:
     auto_apply: dependents
     build_to: cache
     applies_builders:
-      - “source_gen|combining_builder"
+      - "source_gen|combining_builder"
